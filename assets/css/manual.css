@@ -1284,7 +1284,7 @@ a.white:active {
 .offset-image-1 {
     height: 100%;
     margin: 0 -15px;
-    background-image: url("https://pbs.twimg.com/media/C6M6bORUYAAfi46.jpg");
+    background-image: url("assets/images/butterfly.jpg");
     background-repeat: no-repeat;
     background-position: 0 61%;
     background-size: cover;
