@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Red Canary | Justice for Yang Song</title>
+    <title>Red Canary 红莺歌</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -34,20 +34,105 @@
     <div id="header"></div>
 
     <!--=============================== Menu-Bar ========================-->
-    <div id="menuBar-charity"></div>
+    <div id="menuBar-charity">
+      <div class="menuBar">
+        <nav class="navbar navbar-default ">
+          <div class="container p0">
+            <div class="navbar-header">
+              <div class="logo">
+                <a href="index.html" class="navbar-brand">
+                  <img src="assets/images/logo.png" alt="Red Canary logo" style="height: 150px; margin-top: -50px;">
+                </a>
+              </div>
+              <span>
+                红莺歌
+              </span>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#navbar-menu" style="margin-top: -25px; box-shadow: 3px solid black">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="navbar-right">
+              <div id="navbar-menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                  <li class="dropdown">
+                    <a href="index.html">NEWS</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Our causes">ABOUT US</a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="about-us.html#mission">MISSION</a></li>
+                      <li><a href="about-us.html#whoweare">WHO WE ARE</a></li>
+                      <li><a href="about-us.html#projects">PROJECTS</a></li>
+                      <li><a href="about-us.html#donate">JOIN US</a></li>
+                      <li ><a href="about-us.html#contact">CONTACT</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="about-us.html#whoweare" class="about-us" title="About us">PARTNERS & ALLIES</a></li>
+                  <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="News">PROJECTS</a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="about-us.html#projects">KNOW-YOUR-RIGHTS</a></li>
+                      <li><a href="about-us.html#projects">COMMUNITY HEALTH</a></li>
+                      <li><a href="about-us.html#projects">LEGAL AID</a></li>
+                      <li><a href="about-us.html#projects">PEER SUPPORT</a></li>
+                      <li><a href="about-us.html#projects">RESEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown features-menu">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button" aria-expanded="false" title="Features">MEDIA</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="resources.html" >SONG YANG VIGIL</a></li>
+                        <li><a href="resources.html" >COMMUNITY PUBLICATIONS</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button" aria-expanded="false" title="Shop">SUPPORT US</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ><a href="about-us.html#support">DONATE</a></li>
+                        <li ><a href="about-us.html#support">VOLUNTEER</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+    "use strict";
+    // ===================== Menu Bar ======================
+     $(document).ready(function(){
+    var pathname = window.location.pathname;
+    var page = pathname.split(/[/ ]+/).pop();
+    var menuItems = $('#navbar-menu a');
+    menuItems.each(function(){
+        var mi = $(this);
+        var miHrefs = mi.attr("href");
+        var miParents = mi.parents('li');
+        if(page == miHrefs) {
+            miParents.addClass("active").siblings().removeClass('active');
+        }
+    });
+     });
+</script>
+    </div>
 
     <!--=============================== Slider ==========================-->
     <div class="slider">
         <div id="home-carousel" class="carousel" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner" role="listbox" style="margin-top: 35px;">
 
                 <div class="item active slide_1">
                     <div class="container p0">
                         <div class="item-content">
                             <div class="gb-middle ">
-                                <div class="slider-info ">
+                                <div class="slider-info">
                                     <h4>Justice for Yang Song</h4>
-                                    <h2>11/25 Community Vigil</h2>
+                                    <h2>Community Vigil</h2>
                                     <div class="buttons">
                                         <a href="https://www.facebook.com/events/246034939420529/" class="red-btn red-btn-0">Join our vigil.</a>
                                     </div>
@@ -530,7 +615,7 @@
                             as a way to help with fundraising event planning, entertaining and engaging your donors </p>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="owl-carousel ">
                 <div class="person-card item">
@@ -764,6 +849,13 @@
 <script src="assets/js/scrollBar.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/myScript.js"></script>
+
+<script>
+  $.get("menu-bar-charity.html", function(data){
+    $('#menuBar-charity').append(data);
+  });
+
+</script>
 
 </body>
 </html>
