@@ -393,12 +393,12 @@ iframe{
     position: absolute;
     top: 52px;
     z-index: 9999;
-    width: 100%;
+    width: 98%;
 }
 
 .p0 {
     padding-left: 6px;
-    padding-right: 0;
+    padding-right: 6px;
 }
 
 .logo {
@@ -406,7 +406,8 @@ iframe{
 }
 
 .navbar-right {
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-right: 20px;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -425,11 +426,11 @@ iframe{
 }
 
 .navbar-default .navbar-collapse{
-    padding-right: 0;
+    padding-right: 10px;
 }
 
 .navbar-nav > li {
-    margin-left: 33px;
+    margin-left: 23px;
 }
 
 .navbar-default {
@@ -439,16 +440,17 @@ iframe{
 
 .navbar-header span {
     color: #fff;
+    opacity: 0.75;
     font-family: Cutie Patootie;
-    font-size: 50px;
+    font-size: 25px;
     position: absolute;
-    top: 52px;
-    left: 55px;
+    top: 62px;
+    left: 110px;
 }
 
 .navbar-default .navbar-nav li {
     line-height: 2;
-    text-align: center;
+    /*text-align: center;*/
     font-weight: 700;
 }
 
@@ -467,7 +469,7 @@ iframe{
 }
 
 .navbar-default ul li.active a {
-    color: #f20000;
+    color: #FFDF00;
     background-color: transparent;
     border-bottom: 2px solid #f20000;
     padding-bottom: 4px
@@ -486,7 +488,7 @@ iframe{
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover{
     background-color: transparent;
-    color: #f20000;
+    color: #FFDF00;
 }
 
 .last {
@@ -503,13 +505,14 @@ iframe{
 
 .dropdown-menu{
     background: rgba(6, 6, 6, 0.9);
+    margin-right: 25px;
 }
 
 .navbar-nav>li>.dropdown-menu{
     font-size: 12px;
-    left: -80px;
+    left: 0px;
     right: auto;
-    padding: 20px 50px;
+    padding: 20px 20px;
     width: auto;
     min-width: 100%;
     text-align: center;
@@ -517,7 +520,7 @@ iframe{
 }
 
 .navbar-nav>li.features-menu>.dropdown-menu{
-    left: -62px;
+    left: -2px;
 }
 
 .navbar-nav>li>.dropdown-menu li{
@@ -1650,7 +1653,7 @@ a.white:active {
     }
 
     .navbar-default .navbar-collapse {
-        padding-right: 15px;
+        padding-right: 10px;
         border-color: transparent;
         box-shadow: none;
     }
@@ -2132,7 +2135,7 @@ a.white:active {
 .banner{
     position: relative;
     height: 481px;
-    background-image: url("http://via.placeholder.com/1920x480");
+    background-image: url("../../assets/images/vigil2018/redsigns.jpg");
     background-size: cover;
     background-position: 0 5%;
     background-repeat: no-repeat;
@@ -3402,7 +3405,7 @@ p.about-author-paragraph:hover a{
 
 /*======== 12.1. Become a Volunteer ============*/
 .become-vol{
-    background-image: url("http://via.placeholder.com/1920x700");
+    background-image: url("../../assets/images/vigil2018/aboutbanner.jpg");
     background-size: cover;
 }
 
@@ -3519,7 +3522,7 @@ p.about-author-paragraph:hover a{
 }
 
 .shop-sort .dropdown-menu{
-    left: 30px;
+    left: 10px;
 }
 
 .sort-right{
